@@ -23,7 +23,7 @@
     <p>FirstName: <input type="text" name="firstname" placeholder="First Name" value="<?php echo $row[1]; ?>"></p>
     <p>LastName: <input type="text" name="lastname" placeholder="Last Name" value="<?php echo $row[2]; ?>"></p>
     <p>Email: <input type="text" name="email" placeholder="Type your email" value="<?php echo $row[3]; ?>"></p>
-    <p>Address: <textarea name="address" placeholder="Type your address"><?php echo $row[2]; ?></textarea></p>
+    <p>Address: <textarea name="address" placeholder="Type your address"><?php echo $row[4]; ?></textarea></p>
     <input type="submit" name="savedata" value="Update Data" />
 
     <?php

@@ -6,7 +6,7 @@ include("dbconnection.php"); // include database connection file and open a conn
     id - get from URL query string using $_GET method */
 
 if( isset($_GET['id']) ) {
-    $id = mysqli_real_escape_string($conn, $_POST['id']);
+    $id = mysqli_real_escape_string($conn, $_GET['id']);
 
     /* delete record */
     $delete_data = mysqli_query($conn, "DELETE FROM student WHERE user_id=" . $id . ";");

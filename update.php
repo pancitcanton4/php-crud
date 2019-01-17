@@ -12,13 +12,13 @@ include("dbconnection.php"); // include database connection file and open a conn
 
 if( isset($_POST['id']) ) {
     $id = mysqli_real_escape_string($conn, $_POST['id']);
-    $firstname = mysqli_real_escape_string($conn, $_POST['filename']);
+    $firstname = mysqli_real_escape_string($conn, $_POST['firstname']);
     $lastname = mysqli_real_escape_string($conn, $_POST['lastname']);
     $email = mysqli_real_escape_string($conn, $_POST['email']);
     $address = mysqli_real_escape_string($conn, $_POST['address']);
 
     /* update all columns - firstname, lastname, email, address */
-    $update_data = mysqli_query($conn, "UPDATE users SET firstname='" . $firstname . "', lastname='" . $lastname . "', email='" . $email . "', address='" . $address . "' WHERE user_id=" . $id . ";");
+    $update_data = mysqli_query($conn, "UPDATE student SET firstname='" . $firstname . "', lastname='" . $lastname . "', email='" . $email . "', address='" . $address . "' WHERE user_id=" . $id . ";");
 
     session_start(); // start a session
 
@@ -33,4 +33,4 @@ if( isset($_POST['id']) ) {
     header("Location: edit.php"); // return to main page
 }
 
-?>
+?>sss
